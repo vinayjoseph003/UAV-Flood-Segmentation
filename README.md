@@ -103,6 +103,9 @@ The ResNet34 encoder is initialized with ImageNet pretrained weights to leverage
 
 ## 📊 Dataset
 
+The dataset used for this project was obtained from Kaggle.
+
+🔗 **Dataset:** [Flood Area Segmentation – Kaggle](https://www.kaggle.com/datasets/faizalkarim/flood-area-segmentation)
 The project works with UAV imagery paired with corresponding segmentation masks.
 
 The dataset contains:

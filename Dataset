@@ -1,7 +1,0 @@
-The dataset used for this project was obtained from Kaggle.
-
-### 🔗 Dataset
-
-[**Flood Area Segmentation – Kaggle**](https://www.kaggle.com/datasets/faizalkarim/flood-area-segmentation)
-
-The dataset contains images and corresponding segmentation masks used for training and evaluating the flood segmentation model.

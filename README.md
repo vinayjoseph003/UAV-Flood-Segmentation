@@ -1,8 +1,3 @@
-Yes. I reviewed **exactly what you have pasted so far** and rebuilt it into one clean, complete `README.md`, keeping your existing structure/content and adding the missing sections and **clear image placeholders** for your actual notebook outputs and separately generated visuals. 
-
-**Copy everything inside this single block and paste it directly into GitHub's `README.md` editor.**
-
-````markdown
 # 🌊 UAV Flood Segmentation using Deep Learning
 
 A deep learning-based semantic segmentation project for detecting and segmenting flooded regions from **UAV (Unmanned Aerial Vehicle) aerial imagery**.
@@ -19,58 +14,15 @@ This project aims to automate the identification of flooded areas from UAV image
 
 ### 🔄 Overall Pipeline
 
-```text
-                    UAV Aerial Images
-                           │
-                           ▼
-                  Dataset Preparation
-                           │
-                           ▼
-                 Image / Mask Validation
-                           │
-                           ▼
-                  Dataset Splitting
-                 ┌─────────┼─────────┐
-                 ▼         ▼         ▼
-              Train      Valid      Test
-                 │
-                 ▼
-             Augmentation
-                 │
-                 ▼
-        U-Net + ResNet34 Encoder
-                 │
-                 ▼
-             Model Training
-                 │
-                 ▼
-          Validation & Evaluation
-                 │
-                 ▼
-         Flood Segmentation Mask
-                 │
-                 ▼
-        Flooded Area Estimation
-                 │
-                 ▼
-          Coverage Categorization
-````
+<img width="1774" height="887" alt="ChatGPT Image Sep 28, 2026, 12_00_30 AM" src="https://github.com/user-attachments/assets/05504d3c-dc64-480e-bc0f-e87f73676605" />
 
----
+
+
+
 
 ## 🖼️ Project Architecture
 
-<!-- ADD GENERATED ARCHITECTURE IMAGE HERE -->
-
-<!-- Suggested filename: assets/architecture.png -->
-
-<p align="center">
-  <img src="assets/architecture.png" alt="UAV Flood Segmentation Architecture" width="900">
-</p>
-
-<p align="center">
-  <i>End-to-end architecture of the UAV flood segmentation system.</i>
-</p>
+<img width="1774" height="887" alt="ChatGPT Image Sep 27, 2026, 11_33_08 PM" src="https://github.com/user-attachments/assets/f3d8e550-2453-4130-ae25-920a840602d6" />
 
 ---
 
@@ -159,7 +111,7 @@ The dataset contains:
 * Ground-truth segmentation masks
 * Image-mask correspondence information through metadata
 
-### Expected Dataset Structure
+### Dataset Structure
 
 ```text
 flood_dataset/
@@ -235,21 +187,10 @@ Validation and testing data are processed without the training-specific augmenta
 ---
 
 ## 🖼️ Data Augmentation Examples
+<img width="1536" height="1024" alt="ChatGPT Image Sep 27, 2026, 11_52_32 PM" src="https://github.com/user-attachments/assets/6ed6310c-455a-4660-ab91-27f3957eef01" />
 
-<!-- ADD GENERATED DATA AUGMENTATION IMAGE HERE -->
-
-<!-- Suggested filename: assets/data-augmentation.png -->
-
-<p align="center">
-  <img src="assets/data-augmentation.png" alt="Data Augmentation Examples" width="900">
-</p>
-
-<p align="center">
-  <i>Examples of image transformations applied during training.</i>
-</p>
 
 ---
-
 # ⚙️ Training
 
 The model is trained using:
@@ -270,7 +211,7 @@ Learning Rate    : 0.0001
 Optimizer        : Adam
 Architecture     : U-Net
 Encoder          : ResNet34
-```
+````
 
 The model tracks training and validation performance throughout the training process.
 
@@ -300,51 +241,19 @@ The combination allows the model to optimize both pixel-level classification and
 
 The notebook generates training curves to monitor model learning, convergence, and validation performance.
 
-## Training & Validation Loss
+The following figure combines the **training and validation loss, validation IoU, and validation Dice score** across the training epochs.
 
-<!-- ADD YOUR ACTUAL TRAINING / VALIDATION LOSS PLOT HERE -->
+### 🖼️ Add Your Training Plots Image Here
 
-<!-- Suggested filename: assets/training-validation-loss.png -->
+<img width="1189" height="390" alt="image" src="https://github.com/user-attachments/assets/ed6b12ef-a4a8-47b5-8283-48259eb62d1c" />
 
-<p align="center">
-  <img src="assets/training-validation-loss.png" alt="Training and Validation Loss" width="850">
-</p>
 
-<p align="center">
-  <i>Training and validation loss across epochs.</i>
-</p>
+### 📊 Performance Trends
 
----
-
-## Validation IoU
-
-<!-- ADD YOUR ACTUAL IoU TRAINING CURVE HERE -->
-
-<!-- Suggested filename: assets/validation-iou.png -->
-
-<p align="center">
-  <img src="assets/validation-iou.png" alt="Validation IoU Curve" width="850">
-</p>
-
-<p align="center">
-  <i>Validation IoU across training epochs.</i>
-</p>
-
----
-
-## Validation Dice Score
-
-<!-- ADD YOUR ACTUAL DICE TRAINING CURVE HERE -->
-
-<!-- Suggested filename: assets/validation-dice.png -->
-
-<p align="center">
-  <img src="assets/validation-dice.png" alt="Validation Dice Curve" width="850">
-</p>
-
-<p align="center">
-  <i>Validation Dice score across training epochs.</i>
-</p>
+* **Loss:** Training loss decreases progressively during training, while validation loss shows an overall decreasing trend with some fluctuations.
+* **Validation IoU:** The validation IoU improves throughout training, reaching approximately **0.77** toward the final epochs.
+* **Validation Dice:** The validation Dice score improves throughout training, reaching approximately **0.86** toward the final epochs.
+* The curves provide an overview of the model's learning behavior and segmentation performance during training.
 
 ---
 
@@ -672,32 +581,6 @@ Flood Area Estimation
 
 ---
 
-# 📁 Repository Structure
-
-```text
-UAV-Flood-Segmentation/
-│
-├── Flood_UAV.ipynb
-├── README.md
-├── LICENSE
-│
-└── assets/
-    │
-    ├── architecture.png
-    ├── data-augmentation.png
-    ├── training-validation-loss.png
-    ├── validation-iou.png
-    ├── validation-dice.png
-    ├── model-metrics.png
-    ├── segmentation-results.png
-    ├── prediction-examples.png
-    ├── flood-coverage-analysis.png
-    ├── test-results.png
-    └── qualitative-results.png
-```
-
----
-
 # 🌍 Potential Applications
 
 The developed segmentation pipeline can potentially be adapted for:
@@ -767,25 +650,4 @@ See [`LICENSE`](LICENSE) for details.
 
 Consider giving the repository a ⭐ on GitHub and exploring the implementation in `Flood_UAV.ipynb`.
 
-```
-
-### For the images
-
-You can create an `assets` folder in GitHub and upload your images there. Then the README will automatically display them.
-
-For the **actual notebook-generated results**, use your real:
-
-- training/validation loss graph
-- IoU curve
-- Dice curve
-- final metrics
-- prediction visualizations
-- segmentation outputs
-
-For the **non-result visuals**, you can generate polished images separately:
-
-- `architecture.png`
-- `data-augmentation.png`
-
-The README already has the image slots, so you don't need to modify the Markdown again after uploading those files.
-```
+---

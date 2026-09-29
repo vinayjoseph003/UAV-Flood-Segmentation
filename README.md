@@ -547,9 +547,11 @@ The current repository contains the notebook-based implementation for UAV flood-
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Authors
 
-## Vinay Joseph Jonnakuti
+## 1. Vinay Joseph Jonnakuti
+## 2. Rani Chinthabathini
+- GitHub : [ranichinthabathini-byte](https://github.com/ranichinthabathini-byte)
 
 ---
 
